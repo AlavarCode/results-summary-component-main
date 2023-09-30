@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    /* Gradients */
+    --Light-slate-blue_bg: hsl(252, 100%, 67%);
+    --Light-royal-blue_bg: hsl(241, 81%, 54%);
+
+    --Violet-blue_circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue_circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;  
+    background: var(--white);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ========== Results ========== */
+.card .results-container {
+    color: var(--Pale-blue);
+    background: linear-gradient(var(--Light-slate-blue_bg), var(--Light-royal-blue_bg));
+    /* height: 44%; */
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 60px 40px;
+    gap: 20px;
+}
+
+h1 {
+    font-size: inherit;
+    color: var(--Light-lavender);
+}
+
+.results-container .score-container {
+    background-image: linear-gradient(var(--Violet-blue_circle), var(--Persian-blue_circle));
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-container span {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.score-container small {
+    font-size: 14px;
+    color: var(--Light-lavender);
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: 16px;
+    color: var(--Light-lavender);
+}
+
+/* ======== Sumamary ========  */
+
+.card .summary-container {
+    padding: 24px;
+    font-size: 14px;
+}
+
+.summary-container .list-scores {
+    list-style: none;
+    margin: 24px 0;
+}
+
+li .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.container div {
+    display: flex;
+    gap: 8px;
+}
+
+.container .score span {
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+}
+
+.list-scores li:first-child .container {
+    background-color: hsl(0, 100%, 67%, 0.05);
+    color: var(--Light-red);
+}
+
+.list-scores li:nth-child(2) .container {
+    background-color: hsla(39, 100%, 56%, 0.05);
+    color: var(--Orangey-yellow);
+}
+
+.list-scores li:nth-child(3) .container {
+    background: hsl(166, 100%, 37%, 0.05);
+    color: var(--Green-teal);
+}
+
+.list-scores li:last-child .container {
+    background: hsl(234, 85%, 45%, 0.05);
+    color: var(--Cobalt-blue);
+}
+
+.summary-container .btn-continue {
+    background-color: var(--Dark-gray-blue);
+    color: #fff;
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+    border-style: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ;
+}
+
+.summary-container .btn-continue:hover {
+    background-color: hsl(248, 28%, 20%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
